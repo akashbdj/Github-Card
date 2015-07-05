@@ -5,6 +5,8 @@ var Card = React.createClass({displayName: "Card",
 
   componentDidMount: function(){
     var cardComponent = this;
+    var abc = $('#abc');
+    console.log(abc);
     $.get("https://api.github.com/users/akash-bhardwaj", function(data){
       cardComponent.setState(data);
     });

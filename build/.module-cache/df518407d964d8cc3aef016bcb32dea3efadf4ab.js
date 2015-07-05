@@ -1,6 +1,6 @@
 var Card = React.createClass({displayName: "Card",
   getInitialState: function(){
-    return {};
+    return {}
   },
 
   componentDidMount: function(){

@@ -1,10 +1,10 @@
 var Card = React.createClass({displayName: "Card",
   getInitialState: function(){
-    return {};
+    return {}
   },
 
   componentDidMount: function(){
-    var cardComponent = this;
+    var cardComponent = this
     $.get("https://api.github.com/users/akash-bhardwaj", function(data){
       cardComponent.setState(data);
     });
