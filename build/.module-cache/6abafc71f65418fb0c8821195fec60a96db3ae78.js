@@ -4,7 +4,8 @@ var Main = React.createClass({displayName: "Main",
   },
 
   addCard: function(login){
-    var arr = this.state.logins.concat(login);
+    var arr = this.state.logins;
+    arr.push(login);
     this.setState({logins: arr});
   },
 

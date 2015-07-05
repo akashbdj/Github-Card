@@ -3,7 +3,7 @@ var Card = React.createClass({displayName: "Card",
     return {};
   },
 
-  componentWillMount: function(){
+  componentDidMount: function(){
     var cardComponent = this;
     $.get("https://api.github.com/users/" + this.props.loginCred, function(data){
       cardComponent.setState(data);

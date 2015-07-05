@@ -4,12 +4,13 @@ var Main = React.createClass({displayName: "Main",
   },
 
   addCard: function(login){
-    var arr = this.state.logins.concat(login);
+    var arr = this.state.logins;
+    arr.push(login);
     this.setState({logins: arr});
   },
 
   render: function(){
-    var cards = this.state.logins.map(function(login){
+    var card = this.state.logins.map(function(login){
       return (
         React.createElement(Card, {loginCred: login})
       );
@@ -17,7 +18,7 @@ var Main = React.createClass({displayName: "Main",
     return (
       React.createElement("div", null, 
         React.createElement(Form, {addCard: this.addCard}), 
-        cards
+        card
       )
     );
   }

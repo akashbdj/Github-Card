@@ -1,10 +1,13 @@
 var Main = React.createClass({displayName: "Main",
   getInitialState: function(){
-    return { logins: [] };
+    return { logins: ["akash-bhardwaj", "varunbehl26"] };
   },
 
   addCard: function(login){
-    var arr = this.state.logins.concat(login);
+    var arr = this.state.logins;
+    console.log(arr);
+    arr.push(login);
+    console.log(arr);
     this.setState({logins: arr});
   },
 
